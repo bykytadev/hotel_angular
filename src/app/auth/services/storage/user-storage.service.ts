@@ -36,19 +36,12 @@ export class UserStorageService {
     return role == 'CUSTOMER';
   }
 
-  static hasToken(): boolean {
-    if (this.getToken() === null) {
-      return false;
-    }
-    return true;
-  }
-
   static getToken(): string {
-    return localStorage.getItem(TOKEN);
+    return localStorage.getItem(TOKEN) ?? '';
   }
 
   static getUser(): any {
-    return JSON.parse(localStorage.getItem(USER));
+    return JSON.parse(localStorage.getItem(USER) as string);
   }
 
 

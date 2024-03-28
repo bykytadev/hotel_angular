@@ -17,10 +17,10 @@ export class RoomsComponent {
   isVisibleMiddle = false;
   loading = false;
   rooms: any = [];
-  id: number = 0; // Assign a default value to 'id'
+  id: number = 0; 
   date: Date[] = [];
-  checkInDate: Date = new Date(); // Assign a default value to 'checkInDate'
-  checkOutDate: Date = new Date(); // Assign a default value to 'checkOutDate'
+  checkInDate: Date = new Date(); 
+  checkOutDate: Date = new Date();
 
   constructor(private customerSerice: CustomerService,
     private router: Router,
